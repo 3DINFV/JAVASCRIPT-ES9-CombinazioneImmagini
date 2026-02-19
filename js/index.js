@@ -29,5 +29,17 @@ function scegli(numBox){
 }
 
 function controlla(){
-    let
+    let vetRis=document.getElementsByClassName("ris");
+    let numOk=0;
+    for(let i=0;i<5;i++){
+        if(vetImg[i]==vetComb[i]){
+            vetRis[i].innerHTML = "OK";
+            numOk++;
+        }else
+            vetRis[i].innerHTML = "NO";
+    }
+    if(numOk==5){
+        console.log("Hai indovinato");
+        document.getElementById("btnControlla").disabled=true;
+    }
 }
